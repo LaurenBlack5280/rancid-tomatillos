@@ -2,13 +2,14 @@ import './App.css';
 import React, {Component} from 'react'
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
+import movieData from "../../mockData/movieData"
 
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      movies: []
+      movies: movieData.movies
     }
   }
 
