@@ -17,7 +17,7 @@ class App extends Component {
   return (
     <div className='App'>
       <Header />
-      <MovieContainer />
+      <MovieContainer movieData={this.state.movies}/>
       {/* <Footer /> */}
     </div>
     // <div className="App">

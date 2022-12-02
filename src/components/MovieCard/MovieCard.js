@@ -1,13 +1,14 @@
 import React from 'react'
 
-const MovieCard = (props) => {
+const MovieCard = ({id, title, poster, avgRating, releaseDate}) => {
     return (
         <section className='movie-card'>
             <div>
-                <image src={props.poster_path} alt="movie poster"/>
+                <image src={poster} alt="movie poster"/>
             </div>
-            <h3>{props.title}</h3>
-            <span>{props.release_date}</span>
+            <h3>{title}</h3>
+            <span>{releaseDate}</span>
+            <span>{avgRating}</span>
         </section>
     )
 }
