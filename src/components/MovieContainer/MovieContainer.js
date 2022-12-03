@@ -2,6 +2,7 @@ import React from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 
 const MovieContainer = ({movieData}) => {
+
     const movieCards = movieData.map(movie => {
         return (
             <MovieCard 
