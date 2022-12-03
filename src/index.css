@@ -1,3 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: #dd7832;
+}
+
+:root {
+  --clr-main: #dd7832;
+  --clr-gradient: linear-gradient(45deg, #dd7832, #BD601F, #222222, #666666, #e8e8e8)
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
