@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
-import singleMovie from 'src/mockData/singleMovieData.js'
+import singleMovie from '../../mockData/singleMovieData'
+import MovieDetails from '../MovieDetails/MovieDetails';
 
 class MovieContainer extends Component {
     constructor(props) {
@@ -8,10 +9,16 @@ class MovieContainer extends Component {
         super(props);
         this.state = {
             movieData: this.props.movieData,
-            singleMovie: []
+            singleMovie: {}
         }
     }
-
+    
+    handleClick = event => {
+        event.preventDefault()
+        this.setState({singleMovie: singleMovie.movie})
+        console.log(singleMovie)
+        //event.target.id 
+    }
     sortMovies = () => {
         const movieCards = this.state.movieData.map(movie => {
             return (
@@ -22,6 +29,7 @@ class MovieContainer extends Component {
                     title={movie.title}
                     avgRating={movie.average_rating.toFixed(0)}
                     releaseDate={movie.release_date}
+                    handleClick={this.handleClick}
                 />
             )
         })
@@ -30,8 +38,10 @@ class MovieContainer extends Component {
     }
 
     render() {
+        console.log(this.state.singleMovie)
         return (
             <main className='movie-container'>
+                {/* {!this.state.singleMovie? <MovieDetails /> } */}
                 {this.sortMovies()}
             </main>
         )

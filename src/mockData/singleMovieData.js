@@ -7,8 +7,10 @@ const singleMovie = {
             release_date: "2019-12-04", 
             overview: "Some overview that is full of buzzwords to attempt to entice you to watch this movie! Explosions! Drama! True love! Robots! A cute dog!", 
             average_rating: 6, 
-            genres: ["Drama"], budget:63000000, 
+            genres: ["Drama"], 
+            budget:63000000, 
             revenue:100853753, 
-            runtime:139, tagline: "It's a movie!" }
+            runtime:139,
+            tagline: "It's a movie!" }
 }
 export default singleMovie
