@@ -21,6 +21,7 @@ const MovieContainer = ({movieData}) => {
             {movieCards}
         </main>
     )
+    
 }
 
 

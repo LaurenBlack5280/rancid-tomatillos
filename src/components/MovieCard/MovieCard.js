@@ -5,7 +5,11 @@ const MovieCard = ({id, title, poster, avgRating, releaseDate}) => {
         <section className='movie-card'>
             <div>
                 <img src={poster} alt="movie poster"
-                onClick={() => console.log('hi')}
+                onClick={() => {
+                    console.log('hi')
+
+                    }
+                }
                 />
             </div>
             <h3>{title}</h3>
