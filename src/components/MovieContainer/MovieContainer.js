@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
+import singleMovie from 'src/mockData/singleMovieData.js'
 
 class MovieContainer extends Component {
     constructor(props) {
