@@ -13,6 +13,10 @@ class App extends Component {
     }
   }
 
+  randomMoviePoster = () => {
+    // Math.floor(Math.random() * usersData.length)
+  }
+
   render() {
   return (
     <div className='App'>
