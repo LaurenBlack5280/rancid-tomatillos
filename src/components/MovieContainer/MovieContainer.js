@@ -1,26 +1,40 @@
-import React from 'react'
+import React, { Component } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 
-const MovieContainer = ({movieData}) => {
+class MovieContainer extends Component {
+    constructor(props) {
+        // do props need to be passed down through super?
+        super(props);
+        this.state = {
+            movieData: this.props.movieData,
+            singleMovie: []
+        }
+    }
 
-    const movieCards = movieData.map(movie => {
+    sortMovies = () => {
+        const movieCards = this.state.movieData.map(movie => {
+            return (
+                <MovieCard 
+                    id={movie.id}
+                    key={movie.id}
+                    poster={movie.poster_path}
+                    title={movie.title}
+                    avgRating={movie.average_rating.toFixed(0)}
+                    releaseDate={movie.release_date}
+                />
+            )
+        })
+
+        return movieCards
+    }
+
+    render() {
         return (
-            <MovieCard 
-                id={movie.id}
-                key={movie.id}
-                poster={movie.poster_path}
-                title={movie.title}
-                avgRating={movie.average_rating.toFixed(0)}
-                releaseDate={movie.release_date}
-            />
+            <main className='movie-container'>
+                {this.sortMovies()}
+            </main>
         )
-    })
-    console.log(movieCards)
-    return (
-        <main className='movie-container'>
-            {movieCards}
-        </main>
-    )
+    }
     
 }
 
