@@ -2,6 +2,7 @@ import "./App.css";
 import React, { Component } from "react";
 import Header from "../Header/Header";
 import MovieContainer from "../MovieContainer/MovieContainer";
+import {getMovies} from "../../apiCalls/apiCalls";
 
 
 class App extends Component {
@@ -13,18 +14,8 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-    .then(res => {
-      // console.log('response', res)
-      if(!res.ok) {
-        throw new Error()
-      }
-      return res.json()
-    })
+    getMovies()
     .then(data => {
-      console.log('hello')
-      console.log('show me the $', data)
-      console.log('we have data', data.movies)
         this.setState({ movies: data.movies})
     })
     .catch(err => {
@@ -43,6 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Header randomMovie={this.randomMoviePoster()} /> */}
+        <Header  />
         <MovieContainer movieData={this.state.movies} />
         {/* <Footer /> */}
       </div>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import MovieCard from "../MovieCard/MovieCard";
-import singleMovieData from "../../mockData/singleMovieData";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import "./MovieContainer.css";
+import { getSingleMovie } from "../../apiCalls/apiCalls";
 
 class MovieContainer extends Component {
   constructor(props) {
@@ -10,30 +10,20 @@ class MovieContainer extends Component {
     super(props);
     this.state = {
       movieData: this.props.movieData,
-      singleMovie: singleMovieData.movie,
+      singleMovie: {},
       displayAllMovies: true,
     };
   }
 
-  // componentDidMount = () => {
-  //   fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/${this.state.id}`)
-  //   .then(res => {
-  //     console.log('response', res)
-  //     if(!res.ok) {
-  //       throw new Error()
-  //     }
-  //     return res.json()
-  //   })
-  //   .then(data => {
-
-  //   })
-  //   .catch(err => {
-  //     console.log(`${err.name}, ${err.statusText}`)
-  //   })
-  // }
-
   handleClick = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
+    // getSingleMovie()
+    // .then(data => {
+    //   this.setState({ singleMovie: data.movie})
+    // })
+    // .catch(err => {
+    //   console.log(`${err.name}, ${err.statusText}`)
+    // })
     this.setState({ displayAllMovies: false });
     //event.target.id
   };
