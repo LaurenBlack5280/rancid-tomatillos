@@ -1,8 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* color: #dd7832; */
+}
+
+:root {
+  --clr-main: #dd7832;
+  --clr-mainBackground: #2d3a3a;
+  /* --clr-gradientBackground: radial-gradient(circle #39393b, #524f55, #79787f, #9c99a2, #b3b2bc ); */
+  --clr-gradientBackground: radial-gradient(
+    circle,
+    rgba(156, 153, 162, 1) 0%,
+    rgba(82, 79, 85, 1) 35%,
+    rgba(57, 57, 59, 1) 100%
+  );
+  /* --clr-gradientBackground: radial-gradient(
+    circle,
+    rgba(179, 178, 188, 1) 0%,
+    rgba(156, 153, 162, 1) 15%,
+    rgba(121, 120, 127, 1) 35%,
+    rgba(82, 79, 85, 1) 55%,
+    rgba(57, 57, 59, 1) 100%
+  ); */
+  --clr-gradient: linear-gradient(45deg, #dd7832, #bd601f, #222222, #666666, #e8e8e8);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
@@ -10,6 +37,5 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

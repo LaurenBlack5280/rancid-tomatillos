@@ -1,0 +1,12 @@
+.movie-container {
+  background: var(--clr-gradientBackground);
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+
