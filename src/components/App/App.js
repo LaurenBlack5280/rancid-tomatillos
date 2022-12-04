@@ -14,13 +14,15 @@ class App extends Component {
   }
 
   randomMoviePoster = () => {
-    // Math.floor(Math.random() * usersData.length)
+    const index = Math.floor(Math.random() * this.state.movies.length)
+    const randomMovie = this.state.movies[index];
+    return randomMovie;
   }
 
   render() {
   return (
     <div className='App'>
-      <Header />
+      <Header randomMovie={this.randomMoviePoster()}/>
       <MovieContainer movieData={this.state.movies}/>
       {/* <Footer /> */}
     </div>
