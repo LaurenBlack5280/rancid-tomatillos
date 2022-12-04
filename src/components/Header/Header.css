@@ -1,0 +1,23 @@
+header {
+    background-position: 100% 20%;
+    /* REMINDER: add media selectors (to background
+    position) in order to add breakpoints to make 
+    this fully responsive */
+    background-repeat: no-repeat;
+    background-size: 80%;
+    display: flex;
+    height: 35rem;
+    outline: 1px solid red;
+    width: 100%;
+}
+
+h1 {
+    margin: 0 0 0 1rem;
+}
+
+@media (max-width: 1260px) {
+  header {
+    background-position: 100% 20%;
+    background-size: 80%;
+  }
+}
