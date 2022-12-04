@@ -1,10 +1,11 @@
 import React from 'react'
 
-const MovieDetails = ({ id, title, posterPath, backdropPath, releaseDate, overview, avgRating, genres, budget, revenue, runtime, tagline }) => {
+const MovieDetails = ({ id, title, poster, backdrop, releaseDate, overview, avgRating, genres, budget, revenue, runtime, tagline, goBackHome }) => {
     return(
         <article>
             <h2>{title}</h2>
-            <img src={backdropPath} alt="movie backdrop" />
+            <img src={poster} alt="movie poster" />
+            <img src={backdrop} alt="movie backdrop" />
             <p>
                 <span>{releaseDate} </span>
                 <span>{overview}</span>
@@ -16,6 +17,7 @@ const MovieDetails = ({ id, title, posterPath, backdropPath, releaseDate, overvi
                 <span>{tagline}</span>
 
             </p>
+            <button onClick={() => goBackHome()}>Go back to all movies</button>
         </article>
     )
 }

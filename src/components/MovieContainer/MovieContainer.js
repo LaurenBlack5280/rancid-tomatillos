@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
-import singleMovie from '../../mockData/singleMovieData'
+import singleMovieData from '../../mockData/singleMovieData'
 import MovieDetails from '../MovieDetails/MovieDetails';
 
 class MovieContainer extends Component {
@@ -9,16 +9,22 @@ class MovieContainer extends Component {
         super(props);
         this.state = {
             movieData: this.props.movieData,
-            singleMovie: {}
+            singleMovie: singleMovieData.movie,
+            displayAllMovies: true
         }
     }
     
     handleClick = event => {
         event.preventDefault()
-        this.setState({singleMovie: singleMovie.movie})
-        console.log(singleMovie)
+        this.setState({displayAllMovies: false})
         //event.target.id 
     }
+
+    goBackHome = () => {
+        console.log("GO HOME ROGER!!");
+        this.setState({displayAllMovies: true});
+    }
+
     sortMovies = () => {
         const movieCards = this.state.movieData.map(movie => {
             return (
@@ -41,8 +47,23 @@ class MovieContainer extends Component {
         console.log(this.state.singleMovie)
         return (
             <main className='movie-container'>
-                {/* {!this.state.singleMovie? <MovieDetails /> } */}
-                {this.sortMovies()}
+                {this.state.displayAllMovies ? 
+                this.sortMovies() : 
+                <MovieDetails 
+                id={this.state.singleMovie.id}
+                key={this.state.singleMovie.id}
+                poster={this.state.singleMovie.poster_path}
+                backdrop={this.state.singleMovie.backdrop_path}
+                title={this.state.singleMovie.title}
+                avgRating={this.state.singleMovie.average_rating.toFixed(0)}
+                releaseDate={this.state.singleMovie.release_date}
+                overview={this.state.singleMovie.overview}
+                genres={this.state.singleMovie.genres}
+                budget={this.state.singleMovie.budget}
+                revenue={this.state.singleMovie.revenue}
+                runtime={this.state.singleMovie.runtime}
+                tagline={this.state.singleMovie.tagline}
+                goBackHome={this.goBackHome}/> }
             </main>
         )
     }

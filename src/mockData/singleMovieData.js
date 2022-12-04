@@ -1,4 +1,4 @@
-const singleMovie = {
+const singleMovieData = {
     "movie": 
         {id: 1, 
             title: "Fake Movie Title", 
@@ -13,4 +13,4 @@ const singleMovie = {
             runtime:139,
             tagline: "It's a movie!" }
 }
-export default singleMovie
+export default singleMovieData
