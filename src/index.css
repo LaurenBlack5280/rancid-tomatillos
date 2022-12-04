@@ -9,7 +9,12 @@
   --clr-main: #dd7832;
   --clr-mainBackground: #2d3a3a;
   /* --clr-gradientBackground: radial-gradient(circle #39393b, #524f55, #79787f, #9c99a2, #b3b2bc ); */
-  --clr-gradientBackground: radial-gradient(circle #39393b, #524f55, #79787f, #9c99a2, #b3b2bc );
+  --clr-gradientBackground: radial-gradient(
+    circle,
+    rgba(156, 153, 162, 1) 0%,
+    rgba(82, 79, 85, 1) 35%,
+    rgba(57, 57, 59, 1) 100%
+  );
   /* --clr-gradientBackground: radial-gradient(
     circle,
     rgba(179, 178, 188, 1) 0%,
