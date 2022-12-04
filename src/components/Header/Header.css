@@ -1,7 +1,10 @@
 header {
-    background: var(--clr-gradient);
+    /* background: var(--clr-gradient); */
+    background-position: 100% 20%;
+    background-repeat: no-repeat;
+    background-size: 80%;
     display: flex;
-    height: 20rem;
+    height: 35rem;
     outline: 1px solid red;
     width: 100%;
 }
