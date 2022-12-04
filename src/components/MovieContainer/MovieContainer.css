@@ -1,0 +1,17 @@
+.movie-container {
+  /* background-color: var(--clr-gradientBackground); */
+  /* background: rgb(156, 153, 162); */
+  background: radial-gradient(
+    circle,
+    rgba(156, 153, 162, 1) 0%,
+    rgba(82, 79, 85, 1) 35%,
+    rgba(57, 57, 59, 1) 100%
+  );
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
