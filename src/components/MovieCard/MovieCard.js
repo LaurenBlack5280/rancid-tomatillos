@@ -3,8 +3,8 @@ import "./MovieCard.css";
 
 const MovieCard = ({id, title, poster, avgRating, releaseDate, handleClick}) => {
     return (
-        <section className='movie-card'>
-            <div>
+        <section className="movie-card">
+            <div className="movie-card-poster-container">
                 <span>{avgRating}</span>
                 <img src={poster} alt="movie poster"
                 onClick={event => {handleClick(event)}}

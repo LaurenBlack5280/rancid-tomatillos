@@ -15,6 +15,23 @@ class MovieContainer extends Component {
     };
   }
 
+  // componentDidMount = () => {
+  //   fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/${this.state.id}`)
+  //   .then(res => {
+  //     console.log('response', res)
+  //     if(!res.ok) {
+  //       throw new Error()
+  //     }
+  //     return res.json()
+  //   })
+  //   .then(data => {
+
+  //   })
+  //   .catch(err => {
+  //     console.log(`${err.name}, ${err.statusText}`)
+  //   })
+  // }
+
   handleClick = (event) => {
     event.preventDefault();
     this.setState({ displayAllMovies: false });
