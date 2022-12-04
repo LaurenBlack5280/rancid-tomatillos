@@ -11,7 +11,7 @@
     border: 5px;
     border-radius: 10px;
     height: 22.5rem;
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
     width: 15rem;
   }
