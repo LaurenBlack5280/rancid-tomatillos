@@ -10,7 +10,7 @@ const Hero = ({ randomMovie }) => {
         backgroundImage: `url(${randomMovie.backdrop_path})`,
       }}
     >
-      <div className="hero-content">Hero</div>
+      <div className="hero-content"></div>
     </div>
   );
 };

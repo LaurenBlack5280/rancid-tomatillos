@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import Header from "../Header/Header";
 import MovieContainer from "../MovieContainer/MovieContainer";
 import movieData from "../../mockData/movieData";
+import Hero from "../Hero/Hero";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       movies: movieData.movies,
+      movieForHero: {},
     };
   }
 
@@ -21,7 +23,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header randomMovie={this.randomMoviePoster()} />
+        <Header />
+        <Hero randomMovie={this.randomMoviePoster()} />
         <MovieContainer movieData={this.state.movies} />
         {/* <Footer /> */}
       </div>
