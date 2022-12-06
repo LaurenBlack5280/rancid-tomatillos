@@ -6,7 +6,8 @@ import "./MovieContainer.css";
 
 function MovieContainer({ movieData }) {
   const [displayAllMovies, setDisplayAllMovies] = useState(true);
-  const [singleMovie, setSingleMovie] = useState(singleMovieData.movie);
+  // const [singleMovie, setSingleMovie] = useState(singleMovieData.movie);
+  const [movieID, setMovieID] = useState();
 
   const movieCards = movieData.map((movie) => {
     return (
@@ -18,6 +19,7 @@ function MovieContainer({ movieData }) {
         avgRating={movie.average_rating.toFixed(0)}
         releaseDate={movie.release_date}
         handleClick={setDisplayAllMovies}
+        submitId={setMovieID}
       />
     );
   });
@@ -27,20 +29,8 @@ function MovieContainer({ movieData }) {
       {displayAllMovies ? (
         movieCards
       ) : (
-        <MovieDetails
-          id={singleMovie.id}
-          key={singleMovie.id}
-          poster={singleMovie.poster_path}
-          backdrop={singleMovie.backdrop_path}
-          title={singleMovie.title}
-          avgRating={singleMovie.average_rating.toFixed(0)}
-          releaseDate={singleMovie.release_date}
-          overview={singleMovie.overview}
-          genres={singleMovie.genres}
-          budget={singleMovie.budget}
-          revenue={singleMovie.revenue}
-          runtime={singleMovie.runtime}
-          tagline={singleMovie.tagline}
+        <MovieDetails 
+          id={movieID}
           goBackHome={setDisplayAllMovies}
         />
       )}

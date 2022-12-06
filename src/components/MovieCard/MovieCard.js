@@ -1,7 +1,7 @@
 import React from "react";
 import "./MovieCard.css";
 
-const MovieCard = ({ id, title, poster, avgRating, releaseDate, handleClick }) => {
+const MovieCard = ({ id, title, poster, avgRating, releaseDate, handleClick, submitId }) => {
   return (
     <section className="movie-card">
       <div className="movie-card-poster-container">
@@ -10,6 +10,7 @@ const MovieCard = ({ id, title, poster, avgRating, releaseDate, handleClick }) =
           src={poster}
           alt="movie poster"
           onClick={() => {
+            submitId(id);
             handleClick(false);
           }}
         />
