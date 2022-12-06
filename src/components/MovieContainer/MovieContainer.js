@@ -9,7 +9,7 @@ class MovieContainer extends Component {
     // do props need to be passed down through super?
     super(props);
     this.state = {
-      movieData: this.props.movieData,
+      movieData: props.movieData,
       singleMovie: singleMovieData.movie,
       displayAllMovies: true,
     };

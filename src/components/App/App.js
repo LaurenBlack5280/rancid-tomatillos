@@ -13,14 +13,18 @@ class App extends Component {
       allMovies: movieData.movies,
       movies: [],
       movieForHero: {},
-      error: ''
+      error: '',
+      isLoading: true
     };
   }
 
-  randomMoviePoster = () => {
+  generateRandomMoviePoster = () => {
     const index = Math.floor(Math.random() * this.state.allMovies.length);
     const randomMovie = this.state.allMovies[index];
-    return randomMovie;
+    this.setState({
+      movieForHero: randomMovie,
+      isLoading: false
+    });
   };
 
   componentDidMount = () => {
@@ -29,6 +33,7 @@ class App extends Component {
       this.setState({
         movies: data.movies
       })
+      this.generateRandomMoviePoster()
     })
     .catch(err => {
       console.log(`${err.name}, ${err.message}`)
@@ -39,11 +44,15 @@ class App extends Component {
   }
 
   render() {
+    if(this.state.isLoading) {
+      return <p>Loading...</p>
+    }
     return (
       <div className="App">
-        {this.state.error && <h2>{this.state.error}</h2>}
+        {/* {this.state.error && <h2>{this.state.error}</h2>} */}
         <Header />
-        <Hero randomMovie={this.randomMoviePoster()} />
+        <Hero randomMovie={this.state.movieForHero} />
+        
         <MovieContainer movieData={this.state.movies} />
         {/* <Footer /> */}
       </div>
