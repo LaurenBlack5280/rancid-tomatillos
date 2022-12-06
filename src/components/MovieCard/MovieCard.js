@@ -9,8 +9,8 @@ const MovieCard = ({ id, title, poster, avgRating, releaseDate, handleClick }) =
         <img
           src={poster}
           alt="movie poster"
-          onClick={(event) => {
-            handleClick(event);
+          onClick={() => {
+            handleClick(false);
           }}
         />
       </div>

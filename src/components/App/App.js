@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import MovieContainer from "../MovieContainer/MovieContainer";
 import movieData from "../../mockData/movieData";
 import Hero from "../Hero/Hero";
-import { getMovies } from "../../apiCalls";
+import { fetchMovieData } from "../../apiCalls";
 
 class App extends Component {
   constructor() {
@@ -13,8 +13,8 @@ class App extends Component {
       allMovies: movieData.movies,
       movies: [],
       movieForHero: {},
-      error: '',
-      isLoading: true
+      error: "",
+      isLoading: true,
     };
   }
 
@@ -23,37 +23,36 @@ class App extends Component {
     const randomMovie = this.state.allMovies[index];
     this.setState({
       movieForHero: randomMovie,
-      isLoading: false
+      isLoading: false,
     });
   };
 
   componentDidMount = () => {
-    getMovies()
-    .then(data => {
-      this.setState({
-        movies: data.movies
+    fetchMovieData("")
+      .then((data) => {
+        this.setState({ movies: data.movies});
+        this.generateRandomMoviePoster();
       })
-      this.generateRandomMoviePoster()
-    })
-    .catch(err => {
-      console.log(`${err.name}, ${err.message}`)
-      this.setState({
-        error: "Sorry, something went wrong"
-      })
-    })
-  }
+      .catch((err) => {
+        console.log(`${err.name}, ${err.message}`);
+        this.setState({ error: "Sorry, something went wrong" });
+      });
+  };
 
   render() {
-    if(this.state.isLoading) {
-      return <p>Loading...</p>
+    if (this.state.isLoading) {
+      return <p>Loading...</p>;
     }
     return (
       <div className="App">
         {/* {this.state.error && <h2>{this.state.error}</h2>} */}
         <Header />
-        <Hero randomMovie={this.state.movieForHero} />
-        
-        <MovieContainer movieData={this.state.movies} />
+        <main>
+          <Hero randomMovie={this.state.movieForHero} />
+
+          <MovieContainer movieData={this.state.movies} />
+        </main>
+
         {/* <Footer /> */}
       </div>
     );
