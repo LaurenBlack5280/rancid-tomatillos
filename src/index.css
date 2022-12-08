@@ -2,12 +2,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* color: #dd7832; */
+  color: var(--clr-main);
 }
 
 :root {
-  --clr-main: #dd7832;
-  --clr-mainBackground: #2d3a3a;
+  --clr-main: rgb(221, 121, 50);
+  --clr-mainOpacity: rgba(221, 121, 50, 0.90);
+  --clr-mainBackground: rgba(57, 57, 59, 1);
+  --clr-mainHeaderBackground: rgba(57, 57, 59, 0.941);
+  --clr-avgRating: rgba(57, 57, 59, 0.60);
   /* --clr-gradientBackground: radial-gradient(circle #39393b, #524f55, #79787f, #9c99a2, #b3b2bc ); */
   --clr-gradientBackground: radial-gradient(
     circle,

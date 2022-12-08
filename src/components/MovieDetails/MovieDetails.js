@@ -1,26 +1,47 @@
-import React from 'react'
+import React, { Component } from "react";
+import { fetchMovieData } from "../../apiCalls";
 
-const MovieDetails = ({ id, title, poster, backdrop, releaseDate, overview, avgRating, genres, budget, revenue, runtime, tagline, goBackHome }) => {
-    return(
-        <article>
-            <h2>{title}</h2>
-            <img src={poster} alt="movie poster" />
-            <img src={backdrop} alt="movie backdrop" />
-            <p>
-                <span>{releaseDate} </span>
-                <span>{overview}</span>
-                <span>{avgRating}</span>
-                <span>{genres}</span>
-                <span>{budget}</span>
-                <span>{revenue}</span>
-                <span>{runtime}</span>
-                <span>{tagline}</span>
+class MovieDetails extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: props.id,
+      movie: {},
+      error: "",
+    };
+  }
 
-            </p>
-            <button onClick={() => goBackHome()}>Go back to all movies</button>
-        </article>
-    )
+  componentDidMount = () => {
+    fetchMovieData(`/${this.state.id}`)
+    .then(data => {
+        console.log("DATA=========", data)
+        this.setState({movie: data.movie})
+    })
+    .catch( err => {
+        this.setState({error: err.status})
+    })
+  }
+
+  render() {
+    return (
+      <article>
+        <h2>{this.state.movie.title}</h2>
+        <img src={this.state.movie.poster_path} alt="movie poster" />
+        <img src={this.state.movie.backdrop_path} alt="movie backdrop" />
+        <p>
+          <span>{this.state.movie.release_date} </span>
+          <span>{this.state.movie.overview}</span>
+          <span>{this.state.movie.average_rating}</span>
+          <span>{this.state.movie.genres}</span>
+          <span>{this.state.movie.budget}</span>
+          <span>{this.state.movie.revenue}</span>
+          <span>{this.state.movie.runtime}</span>
+          <span>{this.state.movie.tagline}</span>
+        </p>
+        <button onClick={() => this.props.goBackHome(true)}>Go back to all movies</button>
+      </article>
+    );
+  }
 }
 
-
-export default MovieDetails
+export default MovieDetails;

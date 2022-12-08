@@ -5,6 +5,7 @@
     max-height: 35rem;
     max-width: 17rem;
     padding: 10px;
+    position: relative;
   }
 
   .movie-card-poster-container {
@@ -17,9 +18,19 @@
   }
 
   .movie-card-poster-container:hover {
-    box-shadow: 0.3rem 0.3rem 0.3rem var(--clr-offWhite);
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--clr-mainOpacity);
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .avg-rating {
+    /* z-index: 1; */
+    border-radius: 5px;
+    width: 4rem;
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background-color: var(--clr-avgRating);
   }
 
   img {

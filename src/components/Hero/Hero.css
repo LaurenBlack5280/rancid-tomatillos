@@ -1,0 +1,66 @@
+.hero-container {
+  background-position: right 20%;
+  /* when using background-position, x-axis for first value
+  and y-axis for second value */
+  /* REMINDER: add media selectors (to background
+    position) in order to add breakpoints to make 
+    this fully responsive */
+  background-repeat: no-repeat;
+  background-size: 80%;
+  display: flex;
+  height: 35rem;
+  /* outline: 1px solid gold; */
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-container::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 50%;
+    background: linear-gradient(
+        90deg,
+        rgba(57, 57, 59, 0.99) 0%,
+        rgb(154, 84, 35, .996) 45%,
+        rgb(221, 120, 50, .50) 85%,
+        rgb(221, 120, 50, .50) 85%,
+        rgb(221, 120, 50, .02) 100%
+      );
+}
+
+/* .hero-content {
+  width: 35%;
+  height: 100%;
+  z-index: 1;
+  background-color: linear-gradient(
+    90deg,
+    rgb(57, 57, 59, 1) 0%,
+    rgb(154, 84, 35, 1) 35%,
+    rgb(221, 120, 50, 1) 100%
+  );
+  outline: 1px solid red;
+} */
+
+@media (max-width: 1260px) {
+  .hero-container {
+    background-position: right 20%;
+    background-size: 90%;
+  }
+}
+
+@media (max-width: 1121px) {
+  .hero-container {
+    background-position: right 20%;
+    background-size: 110%;
+  }
+}
+
+@media (max-width: 920px) {
+  .hero-container {
+    background-position: cover;
+    background-size: cover;
+  }
+}

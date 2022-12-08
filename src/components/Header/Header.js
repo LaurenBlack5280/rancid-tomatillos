@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 
-const Header = ({ randomMovie }) => {
-  console.log(randomMovie);
+const Header = () => {
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if ((window.scrollY >= 300)) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor)
+
   return (
-    <header
-      style={{
-        backgroundImage: `url(${randomMovie.backdrop_path})`,
-      }}
-    >
+    <header className={color ? "header header-background" : "header"}>
       <div>
         <h1>Rancid Tomatillos</h1>
       </div>
