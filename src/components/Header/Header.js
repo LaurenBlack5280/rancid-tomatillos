@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   const [color, setColor] = useState(false);
@@ -16,7 +17,8 @@ const Header = () => {
   return (
     <header className={color ? "header header-background" : "header"}>
       <div>
-        <h1>Rancid Tomatillos</h1>
+        <NavLink exact to="/"><h1>Rancid Tomatillos</h1></NavLink>
+
       </div>
     </header>
   );
