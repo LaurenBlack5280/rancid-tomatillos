@@ -14,7 +14,6 @@ class MovieDetails extends Component {
   componentDidMount = () => {
     fetchMovieData(`/${this.state.id}`)
     .then(data => {
-        console.log("DATA=========", data)
         this.setState({movie: data.movie})
     })
     .catch( err => {

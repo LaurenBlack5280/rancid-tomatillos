@@ -2,7 +2,7 @@ import React from "react";
 import "./MovieCard.css";
 import { NavLink } from "react-router-dom";
 
-const MovieCard = ({ id, title, poster, avgRating, releaseDate, handleClick, submitId }) => {
+const MovieCard = ({ id, title, poster, avgRating, releaseDate }) => {
   return (
     <NavLink to={`/${id}`}>
       <section className="movie-card">
@@ -11,10 +11,6 @@ const MovieCard = ({ id, title, poster, avgRating, releaseDate, handleClick, sub
           <img
             src={poster}
             alt="movie poster"
-            // onClick={() => {
-            //   submitId(id);
-            //   handleClick(false);
-            // }}
           />
         </div>
         <h3>{title}</h3>
