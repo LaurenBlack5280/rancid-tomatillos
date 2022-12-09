@@ -5,6 +5,9 @@ import MovieContainer from "../MovieContainer/MovieContainer";
 import movieData from "../../mockData/movieData";
 import Hero from "../Hero/Hero";
 import { fetchMovieData } from "../../apiCalls";
+import MovieDetails from "../MovieDetails/MovieDetails";
+import { Route, Switch } from 'react-router-dom'
+
 
 class App extends Component {
   constructor() {
@@ -48,9 +51,19 @@ class App extends Component {
         {/* {this.state.error && <h2>{this.state.error}</h2>} */}
         <Header />
         <main>
-          <Hero randomMovie={this.state.movieForHero} />
+          <Switch>
+            <Route exact path="/">
 
-          <MovieContainer movieData={this.state.movies} />
+              <Hero randomMovie={this.state.movieForHero} />
+              <MovieContainer movieData={this.state.movies} />
+            </Route>
+          
+           <Route path="/:id" 
+            render={({match}) => {
+              return <MovieDetails id={match.params.id} />
+            }}
+          />
+          </Switch>
         </main>
 
         {/* <Footer /> */}
