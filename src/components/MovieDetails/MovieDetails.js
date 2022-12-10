@@ -22,8 +22,13 @@ class MovieDetails extends Component {
   }
 
   render() {
+    if(this.state.error) {
+      return (
+        <h2>{this.state.error}</h2>
+      )
+    }
     return (
-      <article>
+      <section>
         <h2>{this.state.movie.title}</h2>
         <img src={this.state.movie.poster_path} alt="movie poster" />
         <img src={this.state.movie.backdrop_path} alt="movie backdrop" />
@@ -38,7 +43,7 @@ class MovieDetails extends Component {
           <span>{this.state.movie.tagline}</span>
         </p>
         <button onClick={() => this.props.goBackHome(true)}>Go back to all movies</button>
-      </article>
+      </section>
     );
   }
 }

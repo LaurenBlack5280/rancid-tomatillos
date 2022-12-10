@@ -25,5 +25,9 @@ describe('Home Page View', () => {
     })
   })
 
-
+  describe("Error Handling", () => {
+    it('As a user, I am informed if there is an error', () => {
+      cy.contains('Sorry, something went wrong!')
+    })
+  })
 })

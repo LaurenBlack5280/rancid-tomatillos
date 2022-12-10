@@ -12,4 +12,8 @@ describe('Single Movie Page View', () => {
       cy.get(".movie-card").eq(1).click()
     })
   })
+
+  it('As a user, I am informed if there is an error', () => {
+    cy.contains('Sorry, something went wrong!')
+  })
 })

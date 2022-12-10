@@ -38,7 +38,10 @@ class App extends Component {
       })
       .catch((err) => {
         console.log(`${err.name}, ${err.message}`);
-        this.setState({ error: "Sorry, something went wrong" });
+        this.setState({ 
+          isLoading: false,
+          error: "Sorry, something went wrong" 
+        });
       });
   };
 
@@ -46,29 +49,70 @@ class App extends Component {
     if (this.state.isLoading) {
       return <p>Loading...</p>;
     }
-    return (
-      <div className="App">
-        {/* {this.state.error && <h2>{this.state.error}</h2>} */}
-        <Header />
-        <main>
-          <Switch>
-            <Route exact path="/">
+    // } else if(this.state.error) {
+    //   return (
+    //     <div >
+    //       <Header />
+    //       <div className="error-page">
+    //         <h2>{this.state.error}</h2>
+    //       </div>
+    //       {/* <Footer /> */}
+    //     </div>
+    //   )
+    // }
+    else{
+      return (
+        <div className="App">
+          <Header />
+          {this.state.error ? (
+            <div className="error-page">
+               <div >
+                 <h2>{this.state.error}</h2>
+               </div>
+             </div>
+          ) : (
+          <main>
+            <Switch>
+              <Route exact path="/">
+                <Hero randomMovie={this.state.movieForHero} />
+                <MovieContainer movieData={this.state.movies} />
+              </Route>
+            
+             <Route path="/:id" 
+              render={({match}) => {
+                return <MovieDetails id={match.params.id} />
+              }}
+            />
+            </Switch>
+          </main>
 
-              <Hero randomMovie={this.state.movieForHero} />
-              <MovieContainer movieData={this.state.movies} />
-            </Route>
+          )}
+  
+          {/* <Footer /> */}
+        </div>
+      );
+    }
+    // return (
+    //   <div className="App">
+    //     <Header />
+    //     <main>
+    //       <Switch>
+    //         <Route exact path="/">
+    //           <Hero randomMovie={this.state.movieForHero} />
+    //           <MovieContainer movieData={this.state.movies} />
+    //         </Route>
           
-           <Route path="/:id" 
-            render={({match}) => {
-              return <MovieDetails id={match.params.id} />
-            }}
-          />
-          </Switch>
-        </main>
+    //        <Route path="/:id" 
+    //         render={({match}) => {
+    //           return <MovieDetails id={match.params.id} />
+    //         }}
+    //       />
+    //       </Switch>
+    //     </main>
 
-        {/* <Footer /> */}
-      </div>
-    );
+    //     {/* <Footer /> */}
+    //   </div>
+    // );
   }
 }
 
