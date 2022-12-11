@@ -5,22 +5,33 @@
     this fully responsive */
     /* background-repeat: no-repeat; */
     /* background-size: 80%; */
-    position: fixed;
+    align-items: center;
     display: flex;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: .4s ease-in;
     height: 5rem;
-    /* outline: 1px solid gold; */
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: .4s ease-in;
     width: 100%;
+    z-index: 1;
 }
 
 .header-background {
+    -webkit-text-stroke: 1px;
     background-color: var(--clr-mainHeaderBackground);
 }
 
+.rancid-home {
+    background-color: var(--clr-main);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+    width: 20rem;
+}
+
 h1 {
-    margin: 0 0 0 1rem;
+    color: var(--clr-mainBackground);
+    margin: 0;
 }
 
