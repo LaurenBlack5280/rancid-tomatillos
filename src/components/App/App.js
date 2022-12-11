@@ -7,6 +7,7 @@ import Hero from "../Hero/Hero";
 import { fetchMovieData } from "../../apiCalls";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import { Route, Switch } from 'react-router-dom'
+import SearchForm from "../SearchForm/SearchForm";
 
 
 class App extends Component {

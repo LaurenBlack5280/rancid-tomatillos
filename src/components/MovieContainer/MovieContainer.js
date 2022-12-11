@@ -3,6 +3,7 @@ import MovieCard from "../MovieCard/MovieCard";
 import singleMovieData from "../../mockData/singleMovieData";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import "./MovieContainer.css";
+import SearchForm from "../SearchForm/SearchForm";
 
 function MovieContainer({ movieData }) {
   
@@ -21,6 +22,7 @@ function MovieContainer({ movieData }) {
 
   return (
     <div className="movie-container">
+      <SearchForm />
         {movieCards}
     </div>
   );
