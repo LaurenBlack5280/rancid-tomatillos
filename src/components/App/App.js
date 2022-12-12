@@ -46,6 +46,12 @@ class App extends Component {
       });
   };
 
+  updateMovies = (filteredMovies) => {
+    this.setState({
+      movies: filteredMovies
+    })
+  }
+
   render() {
     if (this.state.isLoading) {
       return <p>Loading...</p>;
@@ -76,7 +82,9 @@ class App extends Component {
             <Switch>
               <Route exact path="/">
                 <Hero randomMovie={this.state.movieForHero} />
-                <MovieContainer movieData={this.state.movies} />
+                <MovieContainer movieData={this.state.movies} updateMovies={this.updateMovies} />
+                {/* {SearchForm.state.movieSearched && 
+                <MovieContainer movieData={filteredMovies} />} */}
               </Route>
             
              <Route path="/:id" 

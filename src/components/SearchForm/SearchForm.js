@@ -1,11 +1,11 @@
 import React, { Component } from "react";
+import MovieContainer from "../MovieContainer/MovieContainer";
 import './SearchForm.css'
 
 class SearchForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            // movies: props.movieData,
             movieSearched: ''
         }
     }
@@ -13,14 +13,20 @@ class SearchForm extends Component {
     handleChange = (event) => {
         this.setState({
             [event.target.name] : event.target.value,
-            // movies: this.props.movieData
         })
+        const filteredMovies = this.props.movies.filter(movie => movie.title.includes(this.state.movieSearched))
+        console.log(filteredMovies)
+        this.props.updateMovies(filteredMovies)
+        return filteredMovies
+        // (
+        //     <MovieContainer movieData={filteredMovies}/>
+        // )
     }
+
+        
 
     submitMovie = (event) => {
         event.preventDefault()
-        //console.log('event', event)
-        console.log('movies', this.props.movies)
         this.clearInputs()
         console.log('movieSearched', this.state.movieSearched)
     }

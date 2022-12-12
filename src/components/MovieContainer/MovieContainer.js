@@ -5,7 +5,7 @@ import MovieDetails from "../MovieDetails/MovieDetails";
 import "./MovieContainer.css";
 import SearchForm from "../SearchForm/SearchForm";
 
-function MovieContainer({ movieData }) {
+function MovieContainer({ movieData, updateMovies }) {
   
   const movieCards = movieData.map((movie) => {
     return (
@@ -22,7 +22,7 @@ function MovieContainer({ movieData }) {
 
   return (
     <div className="movie-container">
-      <SearchForm movies={movieData}/>
+      <SearchForm movies={movieData} updateMovies={updateMovies}/>
         {movieCards}
     </div>
   );
