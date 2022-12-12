@@ -20,9 +20,15 @@ class SearchForm extends Component {
     submitMovie = (event) => {
         event.preventDefault()
         //console.log('event', event)
-        console.log('movieSearched', this.state.movieSearched)
         console.log('movies', this.props.movies)
-        
+        this.clearInputs()
+        console.log('movieSearched', this.state.movieSearched)
+    }
+
+    clearInputs = () => {
+        this.setState({
+            movieSearched: ''
+        })
     }
 
     render() {
