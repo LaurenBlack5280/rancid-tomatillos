@@ -69,8 +69,8 @@ class MovieDetails extends Component {
                     <img src={rancidMeter}></img>
                   </div>
                   <p className="rancid-meter-rating">
-                    <span className="rr-1">Rancid Rating</span>
-                    <span className="rr-2">{this.state.movie.average_rating}/10</span>
+                    <span className="rr-1 rr-3">Rancid Rating</span>
+                    <span className="rr-2 rr-3">{this.state.movie.average_rating}/10</span>
                   </p>
                 </div>
               </div>

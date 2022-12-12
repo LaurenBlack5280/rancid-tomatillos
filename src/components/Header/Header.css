@@ -27,11 +27,12 @@
     display: flex;
     justify-content: center;
     margin-left: 2rem;
-    width: 20rem;
+    width: 25rem;
 }
 
 h1 {
     color: var(--clr-mainBackground);
+    font-size: 3rem;
     margin: 0;
 }
 
