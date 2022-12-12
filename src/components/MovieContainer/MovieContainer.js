@@ -22,7 +22,7 @@ function MovieContainer({ movieData }) {
 
   return (
     <div className="movie-container">
-      <SearchForm />
+      <SearchForm movies={movieData}/>
         {movieCards}
     </div>
   );
