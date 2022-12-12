@@ -10,20 +10,25 @@ class SearchForm extends Component {
         }
     }
 
+    // handleChange = (event) => {
+    //     this.setState({
+    //         [event.target.name] : event.target.value,
+    //     })
+    //     const filteredMovies = this.props.movies.filter(movie => movie.title.includes(this.state.movieSearched))
+    //     console.log(filteredMovies)
+    //     this.props.updateMovies(filteredMovies)
+    //     return filteredMovies
+    // }
+
     handleChange = (event) => {
         this.setState({
             [event.target.name] : event.target.value,
         })
-        const filteredMovies = this.props.movies.filter(movie => movie.title.includes(this.state.movieSearched))
+        const filteredMovies = this.props.movies.filter(movie => movie.title.toLowerCase().includes(this.state.movieSearched.toLowerCase()))
         console.log(filteredMovies)
         this.props.updateMovies(filteredMovies)
         return filteredMovies
-        // (
-        //     <MovieContainer movieData={filteredMovies}/>
-        // )
-    }
-
-        
+    }        
 
     submitMovie = (event) => {
         event.preventDefault()
