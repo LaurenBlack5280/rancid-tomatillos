@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import MovieContainer from "../MovieContainer/MovieContainer";
 import movieData from "../../mockData/movieData";
 import Hero from "../Hero/Hero";
@@ -85,31 +86,10 @@ class App extends Component {
               </Switch>
             </main>
           )}
-
-          {/* <Footer /> */}
+          <Footer />
         </div>
       );
     }
-    // return (
-    //   <div className="App">
-    //     <Header />
-    //     <main>
-    //       <Switch>
-    //         <Route exact path="/">
-    //           <Hero randomMovie={this.state.movieForHero} />
-    //           <MovieContainer movieData={this.state.movies} />
-    //         </Route>
-    //        <Route path="/:id"
-    //         render={({match}) => {
-    //           return <MovieDetails id={match.params.id} />
-    //         }}
-    //       />
-    //       </Switch>
-    //     </main>
-
-    //     {/* <Footer /> */}
-    //   </div>
-    // );
   }
 }
 
