@@ -14,9 +14,9 @@
 - A user can bookmark any movie info page and share it.
 
 ## Screenshots
-[Home Page]()
-[Single Movie's Detail Page]()
-[gif](https://www.loom.com/share/2a13cf33a3e144e8ad17290605257a8a)
+![Home Page](https://github.com/LaurenBlack5280/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-12-13%20at%201.00.44%20AM.png)
+![Single Movie's Detail Page](https://github.com/LaurenBlack5280/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-12-13%20at%201.25.55%20AM.png)
+![gif](https://www.loom.com/share/2a13cf33a3e144e8ad17290605257a8a)
 
 ## Possible Future Extensions
 - Movie trailers to display in the movie details view
@@ -53,7 +53,9 @@ With the stubbed network response, using a fixture as the body response, we lear
   ```
 
   - The Cypress test runner will open: 
-![Welcome to Cypress](https://github.com/BertoCruz/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-10-24%20at%204.27.54%20PM.png)![Choose a browser](https://github.com/BertoCruz/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-10-24%20at%204.28.39%20PM.png)![Navigate through specs inside the Test Runner](https://github.com/BertoCruz/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-10-24%20at%204.29.45%20PM.png)
+![Welcome to Cypress](https://github.com/LaurenBlack5280/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-10-24%20at%204.27.54%20PM.png)
+![Choose a browser](https://github.com/LaurenBlack5280/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-10-24%20at%204.28.39%20PM.png)
+![Navigate through specs inside the Test Runner](https://github.com/LaurenBlack5280/rancid-tomatillos/blob/main/src/images/Screen%20Shot%202022-12-13%20at%2012.29.59%20AM.png)
 
 
 ## Sources
