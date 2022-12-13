@@ -1,4 +1,3 @@
-
 describe("Single Movie's Detail Page", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270", {
@@ -28,26 +27,26 @@ describe("Single Movie's Detail Page", () => {
     });
 
     it("Should display a movie's entire information", () => {
-      cy.wait("@singleMovie")
+      cy.wait("@singleMovie");
 
-      cy.get("@singleMovie").then(response => {
-        cy.get('.movie-descriptions-container')
+      cy.get("@singleMovie").then((response) => {
+        cy.get(".movie-descriptions-container")
           .should("contain", response.response.body.movie.title)
           .and("contain", response.response.body.movie.release_date)
           .and("contain", response.response.body.movie.runtime)
           .and("contain", response.response.body.movie.overview)
           .and("contain", response.response.body.movie.budget)
           .and("contain", response.response.body.movie.revenue)
-          .and("contain", response.response.body.movie.tagline)
-          
-        cy.get(response.response.body.movie.genres).each( el => {
-          cy.get('.movie-title-info').should("contain", el)
+          .and("contain", response.response.body.movie.tagline);
+
+        cy.get(response.response.body.movie.genres).each((el) => {
+          cy.get(".movie-title-info").should("contain", el);
         });
-        cy.get('.rancid-meter').should("contain", `${response.response.body.movie.average_rating}/10`)
-        
-
-      })
+        cy.get(".rancid-meter").should(
+          "contain",
+          `${response.response.body.movie.average_rating}/10`
+        );
+      });
     });
-
   });
 });
