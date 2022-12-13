@@ -1,38 +1,31 @@
 .header {
-    /* background-position: 100% 20%; */
-    /* REMINDER: add media selectors (to background
-    position) in order to add breakpoints to make 
-    this fully responsive */
-    /* background-repeat: no-repeat; */
-    /* background-size: 80%; */
-    align-items: center;
-    display: flex;
-    height: 5rem;
-    left: 0;
-    position: fixed;
-    top: 0;
-    transition: .4s ease-in;
-    width: 100%;
-    z-index: 1;
+  align-items: center;
+  display: flex;
+  height: 5rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.4s ease-in;
+  width: 100%;
+  z-index: 1;
 }
 
 .header-background {
-    -webkit-text-stroke: 1px;
-    background-color: var(--clr-mainHeaderBackground);
+  background-color: var(--clr-mainHeaderBackground);
+  -webkit-text-stroke: 1px;
 }
 
 .rancid-home {
-    background-color: var(--clr-main);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    margin-left: 2rem;
-    width: 25rem;
+  background-color: var(--clr-main);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
+  width: 25rem;
 }
 
 h1 {
-    color: var(--clr-mainBackground);
-    font-size: 3rem;
-    margin: 0;
+  color: var(--clr-mainBackground);
+  font-size: 3rem;
+  margin: 0;
 }
-

@@ -6,31 +6,30 @@
 }
 
 :root {
-  --clr-main: rgb(221, 121, 50);
-  --clr-mainOpacity: rgba(221, 121, 50, 0.90);
-  --clr-mainMovieDetails: rgba(221, 121, 50, 0.598);
-  --clr-mainBackground: rgba(57, 57, 59, 1);
-  --clr-mainBackground-opacity: rgba(57, 57, 59, 0.673);
-  --clr-mainHeaderBackground: rgba(57, 57, 59, 0.941);
-  --clr-avgRating: rgba(57, 57, 59, 0.60);
-  /* --clr-gradientBackground: radial-gradient(circle #39393b, #524f55, #79787f, #9c99a2, #b3b2bc ); */
+  --clr-avgRating: rgba(57, 57, 59, 0.6);
   --clr-gradientBackground: radial-gradient(
     circle,
     rgba(156, 153, 162, 1) 0%,
     rgba(82, 79, 85, 1) 35%,
     rgba(57, 57, 59, 1) 100%
   );
+  --clr-main: rgb(221, 121, 50);
+  --clr-mainBackground: rgba(57, 57, 59, 1);
+  --clr-mainBackground-opacity: rgba(57, 57, 59, 0.673);
+  --clr-mainHeaderBackground: rgba(57, 57, 59, 0.941);
+  --clr-mainMovieDetails: rgba(221, 121, 50, 0.598);
+  --clr-mainOpacity: rgba(221, 121, 50, 0.9);
   --clr-gradient: linear-gradient(45deg, #dd7832, #bd601f, #222222, #666666, #e8e8e8);
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  height: 80vh;
+  margin: 0;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: 80vh;
 }
 
 code {

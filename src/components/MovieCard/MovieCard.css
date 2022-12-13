@@ -1,40 +1,38 @@
 .movie-card {
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin: 20px;
-    max-height: 35rem;
-    max-width: 17rem;
-    padding: 10px;
-    position: relative;
-  }
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 20px;
+  max-height: 35rem;
+  max-width: 17rem;
+  padding: 10px;
+  position: relative;
+}
 
-  .movie-card-poster-container {
-    border: 5px;
-    border-radius: 10px;
-    height: 22.5rem;
-    /* position: relative; */
-    overflow: hidden;
-    width: 15rem;
-  }
+.movie-card-poster-container {
+  border: 5px;
+  border-radius: 10px;
+  height: 22.5rem;
+  overflow: hidden;
+  width: 15rem;
+}
 
-  .movie-card-poster-container:hover {
-    box-shadow: 0.3rem 0.3rem 0.3rem var(--clr-mainOpacity);
-    transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-  }
+.movie-card-poster-container:hover {
+  box-shadow: 0.3rem 0.3rem 0.3rem var(--clr-mainOpacity);
+  transform: scale(1.05);
+  transition: all 0.4s ease-in-out;
+}
 
-  .avg-rating {
-    /* z-index: 1; */
-    border-radius: 5px;
-    width: 4rem;
-    position: absolute;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    background-color: var(--clr-avgRating);
-  }
+.avg-rating {
+  background-color: var(--clr-avgRating);
+  border-radius: 5px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  position: absolute;
+  width: 4rem;
+}
 
-  img {
-    height: auto;
-    inline-size: 100%;
-    object-fit: cover;
-  }
+img {
+  height: auto;
+  inline-size: 100%;
+  object-fit: cover;
+}
