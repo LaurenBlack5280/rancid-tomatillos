@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 
 const Hero = ({ randomMovie }) => {
-  console.log(randomMovie);
+
   return (
     <div
       className="hero-container"

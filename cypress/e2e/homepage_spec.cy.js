@@ -3,7 +3,8 @@ describe('Home Page View', () => {
     cy.intercept("https://rancid-tomatillos.herokuapp.com/api/v2", {
       method: "GET",
       fixture: "../fixtures/movies.json"
-    });
+    })
+    // .as("moviesData")
     cy.visit("http://localhost:3000")
   })
 
@@ -16,13 +17,17 @@ describe('Home Page View', () => {
   describe("As a user, when I visit the app, all movies should be displayed", () => {
     it('Should show all movies', () => {
       cy.get('.movie-container').within(() => {
-        cy.get(".movie-card").eq(0).should("contain", "Money Plane")
-        .and("contain", "2020-09-29")
-        cy.get(".movie-card").eq(1).should("contain", "Mulan")
-        .and("contain", "2020-09-04")
+        cy.get(".movie-card").eq(0).should("contain", "Black Adam")
+        .and("contain", "2022-10-19")
+        cy.get(".movie-card").eq(1).should("contain", "The Woman King")
+        .and("contain", "2022-09-15")
       })
     })
   })
 
-
+  describe("Error Handling", () => {
+    it('As a user, I am informed if there is an error', () => {
+      cy.contains('Sorry, something went wrong!')
+    })
+  })
 })
