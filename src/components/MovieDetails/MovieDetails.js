@@ -20,6 +20,7 @@ class MovieDetails extends Component {
   componentDidMount = () => {
     fetchMovieData(`/${this.state.id}`)
       .then((data) => {
+        console.log(this.state.id)
         // also setState to backdrop, by invoking styleBackdrop() here
         this.setState({ movie: data.movie, isLoading: false });
       })

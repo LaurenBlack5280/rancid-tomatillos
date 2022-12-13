@@ -1,13 +1,13 @@
 describe('Home Page View', () => {
   beforeEach(() => {
-    cy.intercept("https://rancid-tomatillos.herokuapp.com/api/v2", {
-      method: "GET",
+    cy.intercept("GET", "https://rancid-tomatillos.herokuapp.com/api/v2", {
       fixture: "../fixtures/movies.json"
     });
     cy.visit("http://localhost:3000")
   })
 
-  describe("Rancid Tomatillos Nav Bar", () => {
+  describe("Rancid Tomatillos Nav Bar and Hero", () => {
+    
     it('Should have a title', () => {
       cy.contains("Rancid Tomatillos");
     })
