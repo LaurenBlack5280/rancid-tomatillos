@@ -15,12 +15,30 @@ class MovieDetails extends Component {
     };
   }
 
-  styleBackdrop = () => {};
+  formatDollarFigure = (property) => {
+    const amount = parseInt(property);
+    const numFor = Intl.NumberFormat("en-US");
+    const formattedAmount = numFor.format(amount);
+
+    if (property === 0) {
+      return "No public record";
+    } else {
+      return `$${formattedAmount}`;
+    }
+  };
+
+  checkForGenre = () => {
+    if (this.state.movie.genres.length) {
+      return this.state.movie.genres.join(", ");
+    } else {
+      return "No genre available";
+    }
+  };
 
   componentDidMount = () => {
     fetchMovieData(`/${this.state.id}`)
       .then((data) => {
-        console.log(this.state.id)
+        console.log(this.state.id);
         // also setState to backdrop, by invoking styleBackdrop() here
         this.setState({ movie: data.movie, isLoading: false });
       })
@@ -53,7 +71,10 @@ class MovieDetails extends Component {
             <div className="movie-poster-container">
               <div className="movie-poster-wrapper">
                 <div className="movie-poster">
-                  <img src={this.state.movie.poster_path} alt="movie poster" />
+                  <img
+                    src={this.state.movie.poster_path}
+                    alt={`movie poster for ${this.state.movie.title}`}
+                  />
                 </div>
               </div>
             </div>
@@ -76,8 +97,6 @@ class MovieDetails extends Component {
               </div>
               <div className="more-info">
                 <h3>MORE INFO</h3>
-                {/* <div className="more-info-wrapper">
-                </div> */}
               </div>
               <div className="more-info-details">
                 <p>
@@ -85,17 +104,16 @@ class MovieDetails extends Component {
                   <span className="details-release-date">
                     Release Date: {this.state.movie.release_date}
                   </span>
-                  <span>Average Rating: {this.state.movie.average_rating}</span>
-                  <span>Genres: {this.state.movie.genres}</span>
-                  <span>Movie Budget: {this.state.movie.budget}</span>
-                  <span>Revenue: {this.state.movie.revenue}</span>
+                  <span>Average Rating: {this.state.movie.average_rating}/10</span>
+                  <span>Genres: {this.checkForGenre()}</span>
+                  <span>Movie Budget: {this.formatDollarFigure(this.state.movie.budget)}</span>
+                  <span>Revenue: {this.formatDollarFigure(this.state.movie.revenue)}</span>
                   <span>Runtime: {this.state.movie.runtime} min</span>
                   <span>Tagline: {this.state.movie.tagline}</span>
                 </p>
               </div>
             </div>
           </div>
-          {/* <div className="movie-trailers-container"></div> */}
         </div>
       </section>
     );
