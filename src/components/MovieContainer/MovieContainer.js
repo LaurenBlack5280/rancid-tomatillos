@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import MovieCard from "../MovieCard/MovieCard";
-import singleMovieData from "../../mockData/singleMovieData";
-import MovieDetails from "../MovieDetails/MovieDetails";
 import "./MovieContainer.css";
 import SearchForm from "../SearchForm/SearchForm";
 
