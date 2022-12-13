@@ -3,6 +3,7 @@ import "./Hero.css";
 import rancidMeter from "../../images/rancidMeter.png";
 
 const Hero = ({ randomMovie }) => {
+
   return (
     <div
       className="hero-container"

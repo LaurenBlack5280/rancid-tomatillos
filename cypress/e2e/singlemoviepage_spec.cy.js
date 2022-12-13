@@ -1,3 +1,4 @@
+
 describe("Single Movie's Detail Page", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270", {
@@ -50,11 +51,3 @@ describe("Single Movie's Detail Page", () => {
 
   });
 });
-
-// it("Should display a movie's title and rating", () => {
-
-// });
-
-// it("Should display more of a movie's information", () => {
-
-// });

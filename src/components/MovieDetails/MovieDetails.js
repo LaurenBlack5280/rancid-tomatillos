@@ -37,7 +37,6 @@ class MovieDetails extends Component {
         </div>
       );
     }
-
     return (
       // <section className="movie-details-page" style={this.state.backdrop}>
       <section
