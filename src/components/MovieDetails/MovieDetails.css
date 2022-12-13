@@ -122,7 +122,8 @@
 
 .rancid-meter-container {
   height: 100%;
-  width: 5.9rem;
+  min-width: 5.9rem;
+  max-width: 8rem;
 }
 .rancid-meter-container img{
   height: 100%;
@@ -137,16 +138,8 @@
   justify-content: center;
 }
 
-.rr-1 {
+.rr-3 {
   color: var(--clr-mainBackground);
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-
-.rr-2 {
-  color: var(--clr-mainBackground);
-  font-size: 2rem;
-  font-weight: 900;
 }
 
 .more-info {

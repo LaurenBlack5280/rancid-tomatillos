@@ -9,7 +9,6 @@ import MovieDetails from "../MovieDetails/MovieDetails";
 import { Route, Switch } from 'react-router-dom'
 import SearchForm from "../SearchForm/SearchForm";
 
-
 class App extends Component {
   constructor() {
     super();
@@ -23,19 +22,21 @@ class App extends Component {
   }
 
   generateRandomMoviePoster = () => {
-    const index = Math.floor(Math.random() * this.state.allMovies.length);
-    const randomMovie = this.state.allMovies[index];
-    this.setState({
-      movieForHero: randomMovie,
-      isLoading: false,
-    });
+    if (this.state.movies) {
+      const index = Math.floor(Math.random() * this.state.allMovies.length);
+      const randomMovie = this.state.allMovies[index];
+      this.setState({
+        movieForHero: randomMovie,
+        isLoading: false,
+      });
+    }
   };
 
   componentDidMount = () => {
     fetchMovieData("")
       .then((data) => {
         this.setState({ movies: data.movies});
-        this.generateRandomMoviePoster();
+        this.generateRandomMoviePoster()
       })
       .catch((err) => {
         console.log(`${err.name}, ${err.message}`);
@@ -73,7 +74,7 @@ class App extends Component {
           <Header />
           {this.state.error ? (
             <div className="error-page">
-               <div >
+               <div>
                  <h2>{this.state.error}</h2>
                </div>
              </div>
@@ -109,8 +110,7 @@ class App extends Component {
     //         <Route exact path="/">
     //           <Hero randomMovie={this.state.movieForHero} />
     //           <MovieContainer movieData={this.state.movies} />
-    //         </Route>
-          
+    //         </Route>      
     //        <Route path="/:id" 
     //         render={({match}) => {
     //           return <MovieDetails id={match.params.id} />

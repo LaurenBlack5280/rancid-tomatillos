@@ -16,33 +16,84 @@
 }
 
 .hero-container::after {
+  background: linear-gradient(
+      90deg,
+      rgba(57, 57, 59, 0.99) 0%,
+      rgb(154, 84, 35, .996) 45%,
+      rgb(221, 120, 50, .50) 85%,
+      rgb(221, 120, 50, .50) 85%,
+      rgb(221, 120, 50, .02) 100%
+    );
     content: "";
-    position: absolute;
-    z-index: -1;
+    /* display: flex; */
     inset: 0;
+    /* outline: 1px solid red; */
+    position: absolute;
     width: 50%;
-    background: linear-gradient(
-        90deg,
-        rgba(57, 57, 59, 0.99) 0%,
-        rgb(154, 84, 35, .996) 45%,
-        rgb(221, 120, 50, .50) 85%,
-        rgb(221, 120, 50, .50) 85%,
-        rgb(221, 120, 50, .02) 100%
-      );
+    z-index: -1;
 }
 
-/* .hero-content {
-  width: 35%;
+.hero-content {
+  align-items: center;
+  display: flex;
   height: 100%;
+  justify-content: center;
+  /* outline: 1px solid red; */
+  width: 50%;
   z-index: 1;
-  background-color: linear-gradient(
-    90deg,
-    rgb(57, 57, 59, 1) 0%,
-    rgb(154, 84, 35, 1) 35%,
-    rgb(221, 120, 50, 1) 100%
-  );
-  outline: 1px solid red;
-} */
+}
+
+.hero-movie-info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: center;
+  /* outline: 1px solid red; */
+  width: 80%;
+}
+
+.hero-movie-info h2 {
+  font-size: 3rem;
+  margin: .5rem 0 .5rem 0;
+}
+
+.hero-release-date {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.rancid-meter-hero {
+  display: flex;
+  height: 20rem;
+  width: 100%;
+}
+
+.rancid-meter-hero-container {
+  height: 4rem;
+  width: 4rem;
+}
+
+.rancid-meter-hero-container img {
+  height: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.rancid-meter-hero-rating {
+  margin: 0 0 0 1rem;
+  width: 30%;
+}
+
+.rr-1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.rr-2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
 
 @media (max-width: 1260px) {
   .hero-container {
