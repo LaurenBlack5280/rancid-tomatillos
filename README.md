@@ -8,7 +8,8 @@
 
 ## Features
 
-## Screenshots 
+## GIF
+(https://www.loom.com/share/2a13cf33a3e144e8ad17290605257a8a)
 
 ## Possible Future Extensions
 
@@ -50,13 +51,15 @@
   - [React-Docs](https://reactjs.org/docs/react-api.html)
   - [Swiper](https://swiperjs.com/react)
 ## DTR/Planning
-  - [Excalidraw](https://excalidraw.com/#json=Xfd4Y98CexYSyuzuelnVR,VB8d9qCcewxLisXyr0Vr3g)
+  - [Wireframe & DOM Tree](https://miro.com/app/board/uXjVP9w7LEU=/?share_link_id=720646176895)
   - [DTR](https://docs.google.com/document/d/1l-cgbyDXRRAsCEIqtg_q1_i-p84oiqwTgP11uF8cR98/edit)
-  - [ProjectBoard](https://github.com/BertoCruz/rancid-tomatillos/projects?query=is%3Aopen)
+  - [ProjectBoard](https://github.com/users/LaurenBlack5280/projects/1)
   - [DesignInspo](https://docs.google.com/document/d/17tk_nKESW7fUIKtiwEsKQRpcerEgZ-4HB7PdPBCIAv4/edit?usp=sharing)
 ## Contributors
   - [R. Dani Lopez-Cruz](https://github.com/BertoCruz) 
   - [Dani's LinkedIn Page](https://www.linkedin.com/in/roberto-dani-lopez-cruz-84a03989/)
+  - [Lauren Black's Github](https://github.com/LaurenBlack5280)
+  - [Lauren Black's LinkedIn](https://www.linkedin.com/in/laurenblack5280/)
 
 
 ## Project Specs
