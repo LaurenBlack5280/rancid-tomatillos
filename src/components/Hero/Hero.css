@@ -1,36 +1,28 @@
 .hero-container {
   background-position: right 20%;
-  /* when using background-position, x-axis for first value
-  and y-axis for second value */
-  /* REMINDER: add media selectors (to background
-    position) in order to add breakpoints to make 
-    this fully responsive */
   background-repeat: no-repeat;
   background-size: 80%;
   display: flex;
   height: 35rem;
-  /* outline: 1px solid gold; */
-  width: 100%;
-  position: relative;
   isolation: isolate;
+  position: relative;
+  width: 100%;
 }
 
 .hero-container::after {
   background: linear-gradient(
-      90deg,
-      rgba(57, 57, 59, 0.99) 0%,
-      rgb(154, 84, 35, .996) 45%,
-      rgb(221, 120, 50, .50) 85%,
-      rgb(221, 120, 50, .50) 85%,
-      rgb(221, 120, 50, .02) 100%
-    );
-    content: "";
-    /* display: flex; */
-    inset: 0;
-    /* outline: 1px solid red; */
-    position: absolute;
-    width: 50%;
-    z-index: -1;
+    90deg,
+    rgba(57, 57, 59, 0.99) 0%,
+    rgb(154, 84, 35, 0.996) 45%,
+    rgb(221, 120, 50, 0.5) 85%,
+    rgb(221, 120, 50, 0.5) 85%,
+    rgb(221, 120, 50, 0.02) 100%
+  );
+  content: "";
+  inset: 0;
+  position: absolute;
+  width: 50%;
+  z-index: -1;
 }
 
 .hero-content {
@@ -38,7 +30,6 @@
   display: flex;
   height: 100%;
   justify-content: center;
-  /* outline: 1px solid red; */
   width: 50%;
   z-index: 1;
 }
@@ -49,13 +40,12 @@
   flex-direction: column;
   height: 30%;
   justify-content: center;
-  /* outline: 1px solid red; */
   width: 80%;
 }
 
 .hero-movie-info h2 {
   font-size: 3rem;
-  margin: .5rem 0 .5rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .hero-release-date {

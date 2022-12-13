@@ -22,6 +22,7 @@
 - Movie trailers to display in the movie details view
 - A possible future extension would navigating a homepage where all the movies will be organized by genre. This would have a scrollable feature so that all the movies, via a specific genre, would display in one row.
 - Creating a login and allowing users to save and rate movies.
+- Make this whole application layout responsive
 
 ## Milestones
 - stretching our network request muscles to fetch data and displaying this to our dom.
